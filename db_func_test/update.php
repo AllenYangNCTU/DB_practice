@@ -1,7 +1,7 @@
 <?php
 
 $dsn="mysql:host=localhost;charset=utf8;dbname=school";
-$pdo=new PDO($dsn,'root','');
+$pdo=new PDO($dsn, "root", "root");
 
 $sql="UPDATE `students` SET 
              `uni_id`='{$_POST['uni_id']}',
@@ -16,9 +16,8 @@ $sql="UPDATE `students` SET
              `secondary`='{$_POST['secondary']}'
       WHERE `id`='{$_POST['id']}'";
 
-      echo $sql;
+      print($sql);
 
-//$pdo->query($sql);
 $pdo->exec($sql);
 header("location:index.php");
 ?>
