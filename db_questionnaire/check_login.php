@@ -1,6 +1,6 @@
 <?php
 if(true){
-    header("location:member_center.php");
+    header("location:member.php");
 }
 else{
     header("location:login.php");
